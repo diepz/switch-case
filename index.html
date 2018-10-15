@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bài Tập</title>
+</head>
+<body>
+	<form>
+<input type="text" id="number">
+<input type="button" value="Tính số ngày" onclick="Click()">
+</form>
+
+<div id="result"></div>
+<script type="text/javascript">
+	function Click() {
+		var month = document.getElementById('number').value;
+		switch (month) {
+				case ('1'):
+              case ('3'):
+              case ('5'):
+              case ('7'):
+              case ('8'):
+              case ('10'):
+              case ('12'):
+			document.getElementById('result').innerHTML = "Tháng " + month + " " + "có 31 ngày";
+			break;
+			case("2"):
+			document.getElementById('result').innerHTML = "Tháng " + month + "" + "có 28 hoặc 29 ngày tuy năm nhuận hay không nhuận";
+			break;
+			default:
+			document.getElementById('result').innerHTML = "Tháng " + month + " " + "có 30 ngày";
+
+	}
+}
+	
+</script>
+
+
+
+</body>
+</html>
